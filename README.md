@@ -2,9 +2,9 @@
 
 This project demonstrates how to use Pulumi (typescript) to provision DigitalOcean resources, including VPC, Virtual Machine (Droplets) and a Security Group (Firewall).
 
-This project will provision 3 Virtual Machines (master, worker-01, worker-02), 1 Security Group that opened ports necessary for kubernetes cluster [(see here)](https://kubernetes.io/docs/reference/networking/ports-and-protocols/), and a VPC.
+This project will provision 3 Virtual Machines (master, worker-01, worker-02), 1 Security Group that opened ports necessary for the Kubernetes cluster [(see here)](https://kubernetes.io/docs/reference/networking/ports-and-protocols/), and a VPC.
 
-For kubernetes cluster set-up using this infrastructure, you can see [here](https://github.com/).
+For the Kubernetes cluster set-up using this infrastructure, you can see [here](https://github.com/).
 
 ## Prerequisites
 
@@ -31,8 +31,8 @@ npm install
 Set up your Pulumi stack configuration to specify the DigitalOcean API token and other required configurations.
 
 ```bash
-pulumi config --secret set digitalocean:token <your_digitalocean_api_token>
-pulumi config --secret set config:sshFingerprint <your_ssh_key_fingerprint>
+pulumi config set --secret digitalocean:token <your_digitalocean_api_token>
+pulumi config set --secret config:sshFingerprint <your_ssh_key_fingerprint>
 ```
 
 Replace your_digitalocean_api_token with your DigitalOcean API token and your_ssh_key_fingerprint with your SSH key fingerprint.
@@ -52,7 +52,7 @@ Follow the prompts to confirm the deployment.
 Once deployed, you can access the Droplets via SSH using their public IP addresses:
 
 ```bash
-ssh username@droplet_public_ip
+ssh root@droplet_public_ip
 ```
 
 6. **Cleanup:**

@@ -66,6 +66,10 @@ const securityGroup = new digitalocean.Firewall('kubernetes-sg', {
 			destinationAddresses: ['0.0.0.0/0', '::/0'],
 		},
 	],
+
+	dropletIds: pulumi
+		.all(droplets.map((droplet) => droplet.id))
+		.apply((ids) => ids.map((id) => parseInt(id))),
 })
 
 // Export the Droplet IPs

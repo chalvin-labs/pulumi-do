@@ -1,5 +1,5 @@
 config:
   config:sshFingerprint:
-    secure: AAABAOHLsvRwiAZxIRaKgv/UfkOP4L+5c0xXAOe/Okz8gFxJDKWfZ+Ks6Xq1TJV4pvDZ+9hYWA9ikrt80A1oMain2XuZVn5ZxRxnZDcW6Q==
+    secure: AAABALdjHFSCx7c0DZeREYEQUBD+ZcaiFGi/ALbfu8l8vYY0rKt8ZxBymYcTXLj8O3lG8WFd31OfAekJOh6SjP7w1WpCFEMXZXUAvrcHaw==
   digitalocean:token:
     secure: AAABAChEMxqEZ2RHUPx/6FKoZ4UCkSKAiNHQDmpol9xhxipt3i0PVsO5w7XugKTX3mLz89jqWj9z7ouNMF2FznPhn7bvf+lpe5Yzlri5vSFwcTmBttTMbZxk+COSP7N9AgXFwdoTxA==
