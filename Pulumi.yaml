@@ -1,0 +1,7 @@
+name: digitalocean
+runtime: nodejs
+description: labs for provisioning digitalocean with pulumi
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: typescript
