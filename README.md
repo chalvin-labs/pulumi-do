@@ -1,6 +1,10 @@
-# Pulumi DigitalOcean Deployment
+# Pulumi DigitalOcean
 
-This project demonstrates using Pulumi to deploy DigitalOcean resources, including VPC, Virtual Machine (Droplets) and a Security Group (Firewall).
+This project demonstrates how to use Pulumi (typescript) to provision DigitalOcean resources, including VPC, Virtual Machine (Droplets) and a Security Group (Firewall).
+
+This project will provision 3 Virtual Machines (master, worker-01, worker-02), 1 Security Group that opened ports necessary for kubernetes cluster [(see here)](https://kubernetes.io/docs/reference/networking/ports-and-protocols/), and a VPC.
+
+For kubernetes cluster set-up using this infrastructure, you can see [here](https://github.com/).
 
 ## Prerequisites
 
