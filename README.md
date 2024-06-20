@@ -4,7 +4,7 @@ This project demonstrates how to use Pulumi (typescript) to provision DigitalOce
 
 This project will provision 3 Virtual Machines (master, worker-01, worker-02), 1 Security Group that opened ports necessary for the Kubernetes cluster [(see here)](https://kubernetes.io/docs/reference/networking/ports-and-protocols/), and a VPC.
 
-For the Kubernetes cluster set-up using this infrastructure, you can see [here](https://github.com/).
+For the Kubernetes cluster set-up using this infrastructure, you can see [here](https://github.com/chalvin-labs/ansible-k8s).
 
 ## Prerequisites
 
