@@ -3,6 +3,7 @@ import * as digitalocean from '@pulumi/digitalocean'
 
 const config = new pulumi.Config('config')
 const sshKeyFingerprint = config.requireSecret('sshFingerprint')
+const stack = pulumi.getStack()
 
 // Create a DigitalOcean VPC
 const vpc = new digitalocean.Vpc('k8s-vpc', {
@@ -71,6 +72,29 @@ const securityGroup = new digitalocean.Firewall('kubernetes-sg', {
 		.all(droplets.map((droplet) => droplet.id))
 		.apply((ids) => ids.map((id) => parseInt(id))),
 })
+
+// const dropletNames = [
+//   {
+//     name: 'playground',
+//     size: 's-1vcpu-1gb',
+//   },
+//   {
+//     name: 'playground-02',
+//     size: 's-1vcpu-1gb',
+//   },
+// ]
+// const droplets = dropletNames.map(
+//   (droplet) =>
+//     new digitalocean.Droplet(droplet.name, {
+//       name: droplet.name,
+//       region: vpc.region,
+//       size: droplet.size,
+//       image: 'ubuntu-24-04-x64',
+//       vpcUuid: vpc.id,
+//       monitoring: true,
+//       sshKeys: [sshKeyFingerprint],
+//     })
+// )
 
 // Export the Droplet IPs
 // pulumi stack output dropletIps --json > output.json
